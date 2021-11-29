@@ -1,4 +1,48 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+.nm-tabs-list {
+  list-style: none;
+}
+
+.nm-tab {
+  cursor: pointer;
+}
+
+.nm-tab-icon {
+  position: relative;
+}
+
+.nm-tab-icon-regular,
+.nm-tab-icon-active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nm-tab-icon-regular {
+  display: block;
+}
+
+.nm-tab-icon-active {
+  display: none
+}
+
+.nm-tab.active-tab .nm-tab-icon-regular:not(.no-active-icon) {
+  display: none;
+}
+
+.nm-tab.active-tab .nm-tab-icon-active {
+  display: block;
+}
+  
+.nm-tab-content {
+  display: none;
+}
+
+.nm-tab-content.active-tab {
+  display: block;
+}

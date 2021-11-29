@@ -1,4 +1,31 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
+.nm-tabs-icons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.nm-tabs-icon-selection,
+.nm-tabs-active-icon-selection {
+  display: flex;
+  align-items: center;
+}
+
+.nm-tabs-icon-thumbnail,
+.nm-tabs-active-icon-thumbnail {
+  width: 35px;
+  height: 35px;
+  margin: 10px 15px 10px 0;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nm-tabs-icon-thumbnail.non-populated,
+.nm-tabs-active-icon-thumbnail.non-populated {
+  border-radius: 5px;
+  border: dashed 1px #c3c4c7;
+}
+
+.nm-tabs-delete-icon {
+  color: #b32d2e;
+}

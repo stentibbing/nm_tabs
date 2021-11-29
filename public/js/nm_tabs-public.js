@@ -1,32 +1,45 @@
-(function( $ ) {
+(function( $ ) { 
+	
 	'use strict';
 
-	/**
-	 * All of the code for your public-facing JavaScript source
-	 * should reside in this file.
-	 *
-	 * Note: It has been assumed you will write jQuery code here, so the
-	 * $ function reference has been prepared for usage within the scope
-	 * of this function.
-	 *
-	 * This enables you to define handlers, for when the DOM is ready:
-	 *
-	 * $(function() {
-	 *
-	 * });
-	 *
-	 * When the window is loaded:
-	 *
-	 * $( window ).load(function() {
-	 *
-	 * });
-	 *
-	 * ...and/or other possibilities.
-	 *
-	 * Ideally, it is not considered best practise to attach more than a
-	 * single DOM-ready or window-load handler for a particular page.
-	 * Although scripts in the WordPress core, Plugins and Themes may be
-	 * practising this, we should strive to set a better example in our own work.
-	 */
+	$(function() {
 
+		// Set the first tab and tab content active for each tab and content container
+		$('.nm-tabs-list').each(function() {
+			$('.nm-tab', $(this)).each(function(index) {
+				if (index == 0) {
+					$(this).addClass('active-tab');					
+				}
+			})
+		})
+		
+		$('.nm-tabs-contents').each(function() {
+			$('.nm-tab-content', $(this)).each(function(index) {
+				if (index == 0) {
+					$(this).addClass('active-tab');
+				}
+			})
+		})
+		
+
+		$('.nm-tab').click(function() {
+			
+			let id = $(this).data('id');
+			let tabGroupClass = '.' + $(this).data('group');
+			let clickedTab = $(this);
+			
+			$('.nm-tab-content' + tabGroupClass +'.active-tab').fadeOut(300, function() {
+				$(this).removeClass('active-tab');
+				$('.nm-tab' + tabGroupClass + '.active-tab').removeClass('active-tab');
+				clickedTab.addClass('active-tab');
+				$('.nm-tab-content' + tabGroupClass + '[data-id="' + id + '"]').fadeIn(300, function() {
+					$(this).addClass('active-tab');
+				})
+			});
+		})
+		
+		
+		
+	});
+	
 })( jQuery );
