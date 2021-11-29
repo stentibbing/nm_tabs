@@ -9,7 +9,7 @@
  * Plugin Name:       Nordic Milk Tabs
  * Plugin URI:        https://www.taifuun.ee
  * Description:       This plugin adds tabbed pages with optional icons
- * Version:           1.0.1
+ * Version:           1.0.0
  * Author:            Taifuun OÜ
  * Author URI:        https://www.taifuun.ee
  * License:           GPL-2.0+
