@@ -46,3 +46,25 @@
 .nm-tab-content.active-tab {
   display: block;
 }
+
+.nm-tab-content-heading {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .nm-tabs {
+    display: none;
+  }
+  
+  .nm-tab-content-heading {
+    display: block;
+  }
+}
+
+.nm-tab-content-heading .nm-tab.sustainable_future {
+  margin: 1rem 0;
+}
+
+.nm-tab-content-heading .nm-tab.sustainable_future > h2 {
+  font-size: 2rem;
+}

@@ -12,6 +12,14 @@
 				}
 			})
 		})
+
+		$('.nm-tabs-contents').each(function() {
+			$('.nm-tab', $(this)).each(function(index) {
+				if (index == 0) {
+					$(this).addClass('active-tab');					
+				}
+			})
+		})
 		
 		$('.nm-tabs-contents').each(function() {
 			$('.nm-tab-content', $(this)).each(function(index) {
